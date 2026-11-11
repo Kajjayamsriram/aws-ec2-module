@@ -1,0 +1,2 @@
+variable "itype" {}
+variable "kname" {}
