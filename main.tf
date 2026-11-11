@@ -3,6 +3,6 @@ provider "aws" {
 }
 module "ec2"{
   source = "./module/ec2"
-  itype = "t3.micro"
-  kname = "nasa"
+  itype = var.itype
+  kname = var.kname
 }
