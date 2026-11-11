@@ -1,2 +1,2 @@
-itype = "t3.micro"
-kname = "nasa"
+#itype = "t3.micro"
+#kname = "nasa"
