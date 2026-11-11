@@ -8,7 +8,7 @@ module "ec2"{
 }
 ```
 
-## module call on ec2
+## module call for ec2
 ```
 module "ec2"{
   source = "./module/ec2"
