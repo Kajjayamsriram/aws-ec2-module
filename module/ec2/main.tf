@@ -16,7 +16,7 @@ resource "aws_instance" "ec1" {
   key_name = var.kname
   vpc_security_group_ids = [ data.aws_security_group.sgq.id ]
   tags = {
-    Owner = "hcp"
+    Owner = "platform" #since these are given at ORG Tag Policy
     CostCenter = "main_office"
     Environment = "dev"
   }
