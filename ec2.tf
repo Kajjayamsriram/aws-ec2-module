@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
 data "aws_ami" "ami" {
   most_recent = true
   owners = ["amazon"]
@@ -15,8 +12,8 @@ data "aws_security_group" "sgq" {
 
 resource "aws_instance" "ec1" {
   ami = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
-  key_name = "nasa"
+  instance_type = var.itype
+  key_name = var.kname
   vpc_security_group_ids = [ data.aws_security_group.sgq.id ]
   tags = {
     Owner = "hcp"
